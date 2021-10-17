@@ -22,5 +22,8 @@ public class Test {
         System.out.println(a.tag);
         System.out.println(b.tag);
         System.out.println(Person.count);
+
+        Person.printPerson1("Devid",25,'M');
+
     }
 }

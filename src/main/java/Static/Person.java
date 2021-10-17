@@ -28,4 +28,9 @@ public class Person {
         System.out.println(", age: " + age);
         System.out.println(", gender: " + gender);
     }
+    static void printPerson1(String name, int age, char gender) {
+        System.out.print("name: " + name);
+        System.out.print(", age: " + age);
+        System.out.print(", gender: " + gender);
+    }
 }
