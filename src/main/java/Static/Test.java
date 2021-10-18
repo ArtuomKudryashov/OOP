@@ -24,6 +24,5 @@ public class Test {
         System.out.println(Person.count);
 
         Person.printPerson1("Devid",25,'M');
-
     }
 }
