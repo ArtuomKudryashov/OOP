@@ -1,7 +1,7 @@
 package Polymorphism;
 
 public class Worker extends Person {
-     Person person = new Person();
+
      private int salary;
 
      boolean isSameName(Worker employee) {
@@ -9,7 +9,10 @@ public class Worker extends Person {
      }
 
     public int getSalary() {
-        return salary;
+        return getBaseSalary();
+    }
+    protected int getBaseSalary(){
+         return salary;
     }
 
     public void setSalary(int salary) {

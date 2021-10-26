@@ -2,16 +2,17 @@ package Polymorphism;
 
 public class Manager extends Worker {
 
-    private  int countOfWorker;
+    private  int countOfEmployee;
 
-    public int getCountOfWorker() {
-        return countOfWorker;
+    public int getCountOfEmployee() {
+        return countOfEmployee;
     }
 
-    public void setCountOfWorker(int countOfWorker) {
-        this.countOfWorker = countOfWorker;
+    public void setCountOfEmployee(int countOfEmployee) {
+        this.countOfEmployee = countOfEmployee;
     }
+    @Override
     public  int getSalary() {
-        return super.getSalary()+ super.getSalary() /100 * getCountOfWorker();
+        return getBaseSalary()+ getBaseSalary() /100 * getCountOfEmployee();
     }
 }

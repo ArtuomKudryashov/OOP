@@ -1,10 +1,10 @@
 package Polymorphism;
 
 public class Salary {
-    int getSum(Worker[] workers) {
+    public  static int getSum(Worker[] workersArray) {
         int sum = 0;
-        for (int i = 0; i < workers.length; i++) {
-            sum += workers[i].getSalary();
+        for (int i = 0; i < workersArray.length; i++) {
+            sum += workersArray[i].getSalary();
         }
         return  sum;
     }
