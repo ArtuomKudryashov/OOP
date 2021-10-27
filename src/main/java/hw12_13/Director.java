@@ -1,6 +1,9 @@
 package hw12_13;
 
 public class Director extends Manager {
+    public Director(int baseSalary, String name, int numberOfSubordinates) {
+        super(baseSalary, name, numberOfSubordinates);
+    }
 
     @Override
     public int getSalary() {
