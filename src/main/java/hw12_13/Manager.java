@@ -1,0 +1,22 @@
+package hw12_13;
+
+public class Manager extends Worker {
+    private int  numberOfSubordinates;
+
+    public int getNumberOfSubordinates() {
+        return numberOfSubordinates;
+    }
+
+    public void setNumberOfSubordinates(int numberOfSubordinates) {
+        this.numberOfSubordinates = numberOfSubordinates;
+    }
+
+    @Override
+    public int getSalary() {
+       if (numberOfSubordinates == 0) {
+           return super.getSalary();
+       } else {
+           return  super.getBaseSalary() * (getNumberOfSubordinates()/100*3);
+       }
+    }
+}
