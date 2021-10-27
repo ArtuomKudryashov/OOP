@@ -5,9 +5,9 @@ import hw12_13.Employee;
 public class EmployeeHelper {
 //    поиск сотрудника в массиве по его имени
 
-    public static Employee findByName (String name, Employee[] array){
-        for (int i = 0; i < array.length; i++){
-            if (name.equals(array[i].getName())){
+    public static Employee findByName(String name, Employee[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (name.equals(array[i].getName())) {
                 return array[i];
             }
         }
@@ -16,31 +16,32 @@ public class EmployeeHelper {
 
 //    поиск сотрудника в массиве по вхождению указанной строки в его имени
 
-    public static Employee findBySubName (String subName, Employee[] array){
-        for (int i = 0; i < array.length; i++){
-            if (array[i].getName().contains(subName)){
+    public static Employee findBySubName(String subName, Employee[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].getName().contains(subName)) {
                 return array[i];
             }
         }
         return null;
     }
-//    подсчет зарплатного бюджета для всех сотрудников в массиве
-    public static int getSalarySum( Employee[] array){
-        int result = 0;
-        for (int i = 0; i < array.length; i++){
-          result +=array[i].getSalary();
 
-            }
+    //    подсчет зарплатного бюджета для всех сотрудников в массиве
+    public static int getSalarySum(Employee[] array) {
+        int result = 0;
+        for (int i = 0; i < array.length; i++) {
+            result += array[i].getSalary();
+
+        }
 
         return result;
     }
 //    поиск наименьшей зарплаты в массиве
 
-    public static int getSalarymin( Employee[] array) {
+    public static int getSalarymin(Employee[] array) {
         int resmin = array[0].getSalary();
         for (int i = 0; i < array.length; i++) {
-            if(resmin>array[i].getSalary()){
-                resmin=array[i].getSalary();
+            if (resmin > array[i].getSalary()) {
+                resmin = array[i].getSalary();
             }
 
         }
@@ -49,7 +50,7 @@ public class EmployeeHelper {
 //    поиск наибольшей зарплаты в массиве
 
 
-    public static int getSalarymax( Employee[] array) {
+    public static int getSalarymax(Employee[] array) {
         int resmax = array[0].getSalary();
         for (int i = 0; i < array.length; i++) {
             if (resmax < array[i].getSalary()) {
@@ -59,26 +60,30 @@ public class EmployeeHelper {
         }
         return resmax;
     }
-    public static Manager getMinSubordinates( Manager[] array) {
-        if(array == null || array.length == 0){
-            return  null;
+
+    //поиск наименьшего количества подчиненных в массиве менеджеров
+    public static Manager getMinSubordinates(Manager[] array) {
+        if (array == null || array.length == 0) {
+            return null;
         }
-        Manager minCount = array [0];
+        Manager minCount = array[0];
         for (int i = 0; i < array.length; i++) {
-            if (minCount.getNumberOfSubordinates()> array[i].getNumberOfSubordinates()) {
+            if (minCount.getNumberOfSubordinates() > array[i].getNumberOfSubordinates()) {
                 minCount = array[i];
             }
 
         }
         return minCount;
     }
-    public static Manager getMaxSubordinates( Manager[] array) {
-        if(array == null || array.length == 0){
-            return  null;
+
+    //поиск наибольшего количества подчиненных в массиве менеджеров
+    public static Manager getMaxSubordinates(Manager[] array) {
+        if (array == null || array.length == 0) {
+            return null;
         }
-        Manager maxCount = array [0];
+        Manager maxCount = array[0];
         for (int i = 0; i < array.length; i++) {
-            if (maxCount.getNumberOfSubordinates()> array[i].getNumberOfSubordinates()) {
+            if (maxCount.getNumberOfSubordinates() > array[i].getNumberOfSubordinates()) {
                 maxCount = array[i];
             }
 
@@ -86,6 +91,40 @@ public class EmployeeHelper {
         return maxCount;
     }
 
+    //поиск наибольшей надбавки (разнице между базовой зарплатой и выплатой) в массиве менеджеров
+    public static Manager getMaxDiference(Manager[] array) {
+
+        Manager maxCount = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (maxCount.getNumberOfSubordinates() > array[i].getNumberOfSubordinates()) {
+                maxCount = array[i];
+            }
+
+        }
+        return maxCount;
+    }
+
+    public static int getMinDiff(Manager[] managers) {
+        int minBenefits = managers[0].getSalary() - managers[0].getBaseSalary();
+        for (int i = 1; i < managers.length; i++) {
+            int diff = managers[i].getSalary() - managers[i].getBaseSalary();
+            if (minBenefits < diff) {
+                minBenefits = diff;
+            }
+        }
+        return minBenefits;
+    }
+
+    public static int getMaxDiff(Manager[] managers) {
+        int maxBenefits = managers[0].getSalary() - managers[0].getBaseSalary();
+        for (int i = 1; i < managers.length; i++) {
+            int diff = managers[i].getSalary() - managers[i].getBaseSalary();
+            if (maxBenefits > diff) {
+                maxBenefits = diff;
+            }
+        }
+        return maxBenefits;
+    }
 
 
 }

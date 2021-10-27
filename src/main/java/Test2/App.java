@@ -1,5 +1,7 @@
 package Test2;
 
+import hw12_13.Manager;
+
 import java.util.Arrays;
 
 public class App {
@@ -24,7 +26,7 @@ public class App {
         Salary salary = new Salary();
 
         Employee [] salary1={employee,employee1,employee2,employee3,employee4};
-        System.out.println(Arrays.toString(salary1));
+
 
 
         System.out.println();
@@ -39,12 +41,10 @@ public class App {
         System.out.println(min);
 
 
-
-
-
-
-
     }
+
+
+
 
 
 }
