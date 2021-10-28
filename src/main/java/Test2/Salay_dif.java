@@ -1,6 +1,6 @@
 package Test2;
 
-import hw12_13.Employee;
+import abstract_final.Constant.Employee;
 
 public class Salay_dif {
     public static int getSalarymin( Employee[] array) {

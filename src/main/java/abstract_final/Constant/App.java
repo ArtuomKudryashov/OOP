@@ -1,4 +1,4 @@
-package hw12_13;
+package abstract_final.Constant;
 
 public class App {
     public static void main(String[] args) {
@@ -10,11 +10,11 @@ public class App {
         Director director = new Director(12000,"Anna",3);
 
 
-        Worker[] workers = {worker, manager, director};
+        Worker [] workers = {worker, manager, director};
 
 //        Manager [] managers ={manager, director,};
 
-        Manager[] managers2 = {manager,manager2,manager3};
+        Manager [] managers2 = {manager,manager2,manager3};
 
 
 

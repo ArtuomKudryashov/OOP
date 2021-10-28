@@ -1,9 +1,5 @@
 package Test2;
 
-import hw12_13.Manager;
-
-import java.util.Arrays;
-
 public class App {
     public static void main(String[] args) {
         Employee employee = new Employee("Artuom", 37, 10000);
