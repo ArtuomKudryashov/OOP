@@ -61,7 +61,7 @@ public class EmployeeHelper {
         return resmax;
     }
 
-    //поиск наименьшего количества подчиненных в массиве менеджеров
+//    поиск наименьшего количества подчиненных в массиве менеджеров
     public static Manager getMinSubordinates(Manager[] array) {
         if (array == null || array.length == 0) {
             return null;
@@ -74,7 +74,26 @@ public class EmployeeHelper {
 
         }
         return minCount;
+
     }
+    // //поиск наименьшего количества подчиненных в массиве менеджеров 2 версия
+    public static int getMinSubordinates2(Manager[] array) {
+        if (array == null || array.length == 0) {
+            return 0;
+        }
+        Manager minCount = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (minCount.getNumberOfSubordinates() > array[i].getNumberOfSubordinates()) {
+                minCount = array[i];
+            }
+
+        }
+        return minCount.getNumberOfSubordinates();
+    }
+
+
+
+
 
     //поиск наибольшего количества подчиненных в массиве менеджеров
     public static Manager getMaxSubordinates(Manager[] array) {
